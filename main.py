@@ -2,7 +2,7 @@ import os
 import time
 import openpyxl
 import funciones
-import Pedido
+import pedido
 
 
 
@@ -37,7 +37,7 @@ while ans == True:
 		
 		opcion = input(">>>")
 		if opcion == "1":
-			Pedido.iniciar_menu()
+			pedido.iniciar_menu()
 			
 		elif opcion == "2":
 			f = open("registro.txt","a")
