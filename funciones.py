@@ -1,7 +1,7 @@
 total_en_caja = 2000
 
 def verificar_vacio(dato):
-	while dato == "":
+	while dato == "" or dato.isspace():
 		print("Error, valor vacío.")
 		dato = input("Ingrese nuevamente: ")
 	return dato
@@ -34,7 +34,7 @@ def saludo_tiempo(tiempo, nombre_de_encargado):
 
 
 def verificar_nombre(dato):
-	while dato.isalpha() == False:
+	while not all(x.isalpha() or x == " " for x in dato):
 		print("Error, nombre invalido.")
 		dato = input("Ingrese el nombre nuevamente: ")
 	return dato
